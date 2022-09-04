@@ -8,18 +8,25 @@ import ItemCount from './ItemCount/ItemCount';
 
 function App() {
   const saludo = "Hola Chicos!!"
+  const stock = 10;
   
-  const onAdd = (quantity) => {
-    console.log('Compraste {quantity} unidades');
-  }
+  
   return (
     <div className="App">
       <NavBar />
       <h1>HOLA MUNDO</h1>
       <p>algo mas para chamuyar</p>
-      <ItemListContainer data={'Data'} saludo={saludo} greetings='Darle estilos' />
-      <Producto item={'producto1'} color={'coral'} consoleHolaMundo={'consoleHolaMundo'}/>
-      <ItemCount inicial={1}  stock={5}  onAdd={onAdd} />
+      <ItemListContainer 
+      data={"Data"} 
+      saludo={saludo} 
+      greetings="Darle estilos" 
+      />
+      <Producto 
+      item={"producto1"} 
+      color={"coral"} 
+      consoleHolaMundo={"consoleHolaMundo"}
+      />
+      <ItemCount inicial={1}  stock={5} />
      
     </div>
   );

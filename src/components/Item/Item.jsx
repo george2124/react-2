@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Item = ({info}) => {
+const Item = ({ info }) => {
   return (
-    <a href='' className='film'>
-       <img src={info.image} alt="" />
+    <a href="" className="film">
+       <img src= {info.image} alt="" />
        <p>{info.title}</p>
+       <p>{info.image} </p>
     </a>
   )
 }
