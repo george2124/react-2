@@ -1,7 +1,10 @@
-import React from 'react'
+import { accordionDetailsClasses } from '@mui/material';
+import React, { useState, useEffect } from 'react';
 
-export const ItemDetail = () => {
-  return (
-       <h1>Detalle</h1>
-  );
+const ItemDetail = ({}) => {
+  
+
+    return detalle.forEach(element => {
+        
+    });
 }
