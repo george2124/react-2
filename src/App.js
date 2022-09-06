@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Producto from './components/Productos/Producto';
 import ItemCount from './ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   const saludo = "Hola Chicos!!"
@@ -27,7 +28,7 @@ function App() {
       consoleHolaMundo={"consoleHolaMundo"}
       />
       <ItemCount inicial={1}  stock={5} />
-     
+     <ItemDetailContainer/>
     </div>
   );
 }

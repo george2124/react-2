@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { ItemDetail } from '../ItemDetail/ItemDetail';
+import  ItemDetail  from '../ItemDetail/ItemDetail';
 
 export default function ItemDetailContainer(){
- 
-    const [Detalle, setDetalle] = useState({});
+  const [Detalle, setDetalle] = useState({});
+
 
   useEffect(() => {
-      const getDetalle = new Promise((resolver) => {
-        setTimeout(() => {
-          resolver();
-        }, 2000);
-      });
-      getDetalle.then((res) => setDetalle(res));
-  }, []);
-  
+    fetch('https://pokeapi.co/api/v2/pokemon/1')
+
+    .then((res) => res.json())
+    .then((pokemon) => setDetalle(pokemon));
+  },[]);
 
     return (
     <div>
-        <ItemDetail/>
+        <ItemDetail Detalle={Detalle} />
     </div>
   );
 }
