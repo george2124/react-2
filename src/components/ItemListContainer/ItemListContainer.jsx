@@ -4,23 +4,87 @@ import ItemLIst from '../ItemList/ItemLIst';
 
 
 const films = [
+  
   {
-    id: 1, 
-    image:
-    "https://www.apmusicales.com/category/apm/anuario/digital-final/assets/downloads/ANUARIO%20APM%202020.pdf?cid=132&shop=pesas+rusas+oferta&xi=6&xc=23&pr=90.99&you=0" , 
-    title:"Pesas Rusas",
+    id: '1', 
+    name:'especiales',
+    category:'',
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, provident. Recusandae cumque nobis repudiandae eveniet distinctio! Culpa, hic. Quo officiis cumque iste illo dolore eos soluta voluptate neque, nihil laborum!",
+    price: 700,
+    img: 'https://ibb.co/CWLw4Zw',
+      stock : 10,
    },
   {
-    id: 2, 
-    image:
-    "https://mirfitness.com.ar/producto/par-de-mancuernas-hexagonales-de-caucho-mir/" , 
-    title:"Pesa Hexagonales", 
+    id: '2', 
+    name:'especiales',
+    category:'',
+    description:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price:23000,
+    img: 'https://ibb.co/rp93gVk',
+    stock: 20,
   },
   {
-    id: 3,
-    image:
-     "https://www.gadnic.com.ar/pesas-y-mancuernas/par-de-mancuerna-acero-pintado-ajustable-35kg", 
-     title:"Mancuernas" 
+    id: '3',
+    name:'especiales',
+    category:'',
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis nulla repellendus maxime mollitia neque eos. Quae totam maiores, aut temporibus voluptatem ipsam quisquam facilis explicabo nulla fugit delectus ducimus.",
+    price: 10000,
+    img: 'https://ibb.co/1rMGbzn', 
+     stock: 50,
+  },
+  {
+    id: '4',
+    name:'',
+    category: 'vegana',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: 'https://ibb.co/JBTH58Z',
+    stock: 5,
+  },
+  {
+    id: '5',
+    name:'',
+    category: 'vegana',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: 'https://ibb.co/7CyJGcP',
+    stock: 5,
+  },
+  {
+    id: '6',
+    name:'',
+    category: 'vegana',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: 'https://ibb.co/KrBX59c',
+    stock: 5,
+  },
+  {
+    id: '7',
+    name:'',
+    category: 'ofertas',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: '',
+    stock: 5,
+  },
+  {
+    id: '8',
+    name:'',
+    category: 'ofertas',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: '',
+    stock: 5,
+  },
+  {
+    id: '9',
+    name:'',
+    category: 'ofertas',
+    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est maxime cum, necessitatibus ullam recusandae itaque totam optio, consequatur beatae maiores sunt repellendus deserunt! Minus vero dolorem quia possimus, facere quaerat.",
+    price: 500,
+    img: '',
+    stock: 5,
   },
 ]; 
 

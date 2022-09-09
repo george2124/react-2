@@ -6,15 +6,26 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Producto from './components/Productos/Producto';
 import ItemCount from './ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Footer } from './components/Footer/Footer';
+import ItemLIst from './components/ItemList/ItemLIst';
 
 function App() {
   const saludo = "Hola Chicos!!"
   const stock = 10;
   
   
-  return (
-    <div className="App">
+  return (<>
+      <BrowserRouter>
       <NavBar />
+      <Routes>
+        <Route path='/' element= { <ItemListContainer/> } />
+        <Route path='/category/:id' element= { <ItemListContainer/> }  />
+        <Route path='/producto/:' element= { <ItemDetailContainer/> }  />
+      </Routes>
+      <Footer/>
+      </BrowserRouter>
+      {/* 
       <h1>HOLA MUNDO</h1>
       <p>algo mas para chamuyar</p>
       <ItemListContainer 
@@ -29,7 +40,8 @@ function App() {
       />
       <ItemCount inicial={1}  stock={5} />
      <ItemDetailContainer/>
-    </div>
+     <Event/> */}
+    </>
   );
 }
 

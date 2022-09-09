@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import  ItemDetail  from '../ItemDetail/ItemDetail';
 
 export default function ItemDetailContainer(){
-  const [Detalle, setDetalle] = useState({});
+  const [Detalle, setDetalle] = useState([]);
 
 
   useEffect(() => {
