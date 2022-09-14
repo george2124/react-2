@@ -1,7 +1,11 @@
 import Item from '../Item/Item';
 import React from 'react'
 
- const ItemLIst = ({data = [] }) => {
-  return data.map((film) => <Item key={film.id}  info={film}  />);
+ const ItemLIst = ({productList}) => {
+  return (
+    <div className='cardContainer'>
+        {productList.map((product) => <Item  key={product.id} product={product}/>)}
+    </div>
+  ) 
 };
 export default ItemLIst;

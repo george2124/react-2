@@ -13,8 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [{enlace:'/categoria/Mas vendidos', nombre:'Mas vendidos'}, {enlace:'/categoria/vegana', nombre:'Especiales Veganos'}, {enlace:'/categoria/ofertas', nombre:'Promo y ofertas'} ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function NavBar() {
@@ -41,23 +42,26 @@ export default function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          
+          <NavLink to='/' className='linksTypo' style={{}} >
+            <Typography
+               variant="h6"
+               noWrap
+               component="a"
+               sx={{
+                 mr: 2,
+                 display: { xs: 'none', md: 'flex' },
+                 fontFamily: 'monospace',
+                 fontWeight: 700,
+                 letterSpacing: '.3rem',
+                 color: 'inherit',
+                 textDecoration: 'none',
+               }}
+             >
+               LOGO
+            </Typography>
+          </NavLink>
+         
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -88,8 +92,9 @@ export default function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                  <NavLink className='links' to={page.enlace}>{pages.nombre} </NavLink>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -115,7 +120,16 @@ export default function NavBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {/* {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))} */}
+             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}

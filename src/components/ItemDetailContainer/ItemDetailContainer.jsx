@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { data } from '../../mocks/mockData';
+import Item from '../Item/Item';
 import  ItemDetail  from '../ItemDetail/ItemDetail';
 
 export default function ItemDetailContainer(){
-  const [Detalle, setDetalle] = useState([]);
-
+  const [Detalle, setDetalle] = useState({});
+  const [loading, setLoading] = useState(true)
+  const{id} = useParams()
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/1')
+     data
+    .then((res) => setDetalle(res.find((Item)=> Item.id === id)))
+    .catch((error)=> console.log(error))
+    .finally(()=> setLoading(false))
+  },[id]);
 
-    .then((res) => res.json())
-    .then((pokemon) => setDetalle(pokemon));
-  },[]);
+
+    
 
     return (
     <div>
-        <ItemDetail Detalle={Detalle} />
+       {loading ? <p>Cargando...</p>: <ItemDetail Detalle={Detalle} />}
     </div>
   );
 }

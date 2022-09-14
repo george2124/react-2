@@ -3,7 +3,6 @@ import './App.css';
 import { red } from '@material-ui/core/colors';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Producto from './components/Productos/Producto';
 import ItemCount from './ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,13 +16,13 @@ function App() {
   
   return (<>
       <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path='/' element= { <ItemListContainer/> } />
-        <Route path='/category/:id' element= { <ItemListContainer/> }  />
-        <Route path='/producto/:' element= { <ItemDetailContainer/> }  />
-      </Routes>
-      <Footer/>
+          <NavBar />
+        <Routes>
+            <Route path='/' element= { <ItemListContainer/> } />
+            <Route path='/categoria/:categoriaId' element= { <ItemListContainer/> } />
+            <Route path='/detalle/:id' element= { <ItemDetailContainer/> }/>
+        </Routes>
+          <Footer/>
       </BrowserRouter>
       {/* 
       <h1>HOLA MUNDO</h1>

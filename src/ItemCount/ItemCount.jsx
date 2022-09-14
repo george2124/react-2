@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ItemCount.css';
-export default function ItemCount( {stock, inicial}) {
+export default function ItemCount( {stock, inicial, onAdd}) {
 
   const [count, setcount] = useState(parseInt(inicial));
 
@@ -12,10 +12,6 @@ export default function ItemCount( {stock, inicial}) {
     setcount(count + 1);
   };
 
-
-  const onAdd = () => {
-    console.log(`Compraste ${count} unidades`);
-  }
  
   useEffect(()=>{
     setcount(parseInt(inicial));

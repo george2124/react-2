@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+Proyecto e-commer
+lista de instalador=
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
