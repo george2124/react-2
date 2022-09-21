@@ -38,114 +38,44 @@ export default function NavBar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          
-          <NavLink to='/' className='linksTypo' style={{}} >
-            <Typography
-               variant="h6"
-               noWrap
-               component="a"
-               sx={{
-                 mr: 2,
-                 display: { xs: 'none', md: 'flex' },
-                 fontFamily: 'monospace',
-                 fontWeight: 700,
-                 letterSpacing: '.3rem',
-                 color: 'inherit',
-                 textDecoration: 'none',
-               }}
-             >
-               LOGO
-            </Typography>
-          </NavLink>
-         
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              edge="start"
               color="inherit"
+              aria-label="menu"
+              sx={{mr: 2}}
             >
-              <MenuIcon />
+             <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu}>
-                  <NavLink className='links' to={page.enlace}>{pages.nombre} </NavLink>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {/* {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))} */}
-             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <CartWidget cant={20} />
-          </Box>
+            <Typography variant='h6' component='div' sx={{ flexGrow: 1}}>
+              <NavLink className='links' to="/" style={{ textDecoration: 'none'}}> 
+               Logo
+              </NavLink>
+            </Typography>
+            <Typography variant='h6' component='div' sx={{ flexGrow: 1}}>
+              <NavLink
+              to="/categoria/Mas vendidos"
+              style={{textDecoration: "none"}}
+              >  
+               Más vendidos
+              </NavLink>
+            </Typography>
+            <Typography variant='h6' component='div' sx={{ flexGrow: 1}}>
+              <NavLink className='links' to="/categoria/vegana" style={{ textDecoration: 'none'}}> 
+               Vegana
+              </NavLink>
+            </Typography>
+            <Typography variant='h6' component='div' sx={{ flexGrow: 1}}>
+              <NavLink className='links' to="/categoria/ofertas" style={{ textDecoration: 'none'}}> 
+               Ofertas
+              </NavLink>
+            </Typography>
         </Toolbar>
-      </Container>
-    </AppBar>
+      </AppBar>
+    </Box>
   );
 };
 

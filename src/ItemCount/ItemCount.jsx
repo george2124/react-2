@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './ItemCount.css';
-export default function ItemCount( {stock, inicial, onAdd}) {
+export default function ItemCount( {stock, inicial, onAdd, count, setcount}) {
 
-  const [count, setcount] = useState(parseInt(inicial));
+  
 
   const decrease = () => {
     setcount(count - 1);
