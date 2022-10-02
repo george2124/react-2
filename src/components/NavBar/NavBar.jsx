@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
 
 const pages = [{enlace:'/categoria/Mas vendidos', nombre:'Mas vendidos'}, {enlace:'/categoria/vegana', nombre:'Especiales Veganos'}, {enlace:'/categoria/ofertas', nombre:'Promo y ofertas'} ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -48,12 +49,9 @@ export default function NavBar() {
                Ofertas
               </NavLink>
             </Typography>
-            <button onClick={'/Cart'}>
-              {/* <CartWidget/> */}
-            </button>
-            
+          
               <NavLink className='links' to="/Cart" style={{ textDecoration: 'none'}}> 
-                {/* <CartWidget/> */}
+                <CartWidget/>
               </NavLink>
            
         </Toolbar>

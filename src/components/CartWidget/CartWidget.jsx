@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCart } from "";
+import { useCart } from "../../Context/CartContext";
 
 
 export default function CartWidget({}) {
@@ -7,8 +7,9 @@ export default function CartWidget({}) {
  
   return (
        <div>
-       🛒({ })
+        🛒
        <span>{cartQuantity() || ''}</span>
        </div>
   );
 }
+
