@@ -1,10 +1,14 @@
-
 import React from 'react'
+import { useCart } from "";
 
-export default function CartWidget({ cant }) {
+
+export default function CartWidget({}) {
+ const{cartQuantity} = useCart()
+ 
   return (
-       <>
-       🛒({ cant })
-       </>
+       <div>
+       🛒({ })
+       <span>{cartQuantity() || ''}</span>
+       </div>
   );
 }
