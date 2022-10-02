@@ -21,10 +21,10 @@ import { CartItem } from '../CartItem/CartItem';
         </div>
         :<div>
          <h2>Tu carrito</h2>
-         {cart.map((compra)=> <CartItem key={compra.div} compra={compra}/>)}
+         {cart.map((compra)=> <CartItem key={compra.id} compra={compra}/>)}
          <span>Total a pagar : ${cartTotal()} </span>
          <button onClick={clear}>Vaciar Carrito</button>
-         <button>Terminar compra</button>
+         <button color='secondary'>Terminar compra</button>
         </div>
       }
     </div>
