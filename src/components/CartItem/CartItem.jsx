@@ -9,7 +9,7 @@ export const CartItem = ({compra}) => {
               <span>{compra.name}</span>
               <span>{compra.quantity} </span>
               <span>{compra.price}</span>
-              <button aria-label="fingerprint" color="secondary" onClick={()=>removeItem(compra.id)}>X</button>
+              <button aria-label="fingerprint" color="secondary" onClick={()=>removeItem(compra.id)}>🗑️</button>
     </div>
   )
 }

@@ -24,7 +24,7 @@ import { CartItem } from '../CartItem/CartItem';
          {cart.map((compra)=> <CartItem key={compra.id} compra={compra}/>)}
          <span>Total a pagar : ${cartTotal()} </span>
          <button onClick={clear}>Vaciar Carrito</button>
-         <button color='secondary'>Terminar compra</button>
+         <button onClick={()=> navegar('/comprar')} color='secondary'>Terminar compra</button>
         </div>
       }
     </div>
