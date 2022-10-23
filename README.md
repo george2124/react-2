@@ -6,10 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Uso de React 
 
 In the project directory, you can run:
-## Para el caso de github, Una vez dentro del proyecto, seleccionamos la opción de Clone or Download y copiamos la URL que nos aparece. Arrastro el proyecto a visual estudio code, me posiciono en el proyecto 'my-app' en la terminal 
+## Para el caso de github, Una vez dentro del proyecto, seleccionamos la opción de Clone or Download y copiamos la URL que nos aparece. Arrastro el proyecto a visual studio code, me posiciono en el proyecto 'cd my-app' en la terminal 
 
 
-### Para correr el proyecto, hago uso de `npm start`, en visual estudio code
+### Para correr el proyecto, hago uso de `npm start`, en visual studio code
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
