@@ -6,7 +6,7 @@ export const Comprar = () => {
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
     const [email, setEmail] = useState('');
-    const {cart, cartTotal, clear} = useCart()
+    const {cart, cartTotal} = useCart()
     const [idCompra, setIdCompra] = useState('')
     const [cartelito, setCartelito ] = useState('')
     
@@ -18,15 +18,17 @@ export const Comprar = () => {
             return;
         }
         setApagarBoton(true)
-       console.log(email,nombre,telefono )
+       console.log(email ,nombre ,telefono )
 
        let order = {
-        // buyer : { name: nombre, phone: telefono, email: email}, 
+        buyer : { name: nombre, phone: telefono, email: email}, 
         carrito: cart,
         total: cartTotal
      };
+    
      const db = getFirestore();
-     const miCollection = collection (db, 'order');
+     const miCollection = collection (db, 'orders');
+     
      addDoc(miCollection, order).then(({id})=>{
         setIdCompra(id);
         console.log(id)

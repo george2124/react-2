@@ -1,27 +1,38 @@
-# Getting Started with Create React App
-Proyecto e-commer
-lista de instalador=
+# Proyecto e-commers
+Sandwicheria
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Uso de React 
 
 In the project directory, you can run:
+## Para el caso de github, Una vez dentro del proyecto, seleccionamos la opción de Clone or Download y copiamos la URL que nos aparece. Arrastro el proyecto a visual estudio code, me posiciono en el proyecto 'my-app' en la terminal 
 
-### `npm start`
+
+### Para correr el proyecto, hago uso de `npm start`, en visual estudio code
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+Gif : https://media.giphy.com/media/RgBsoL039vHe4wvo9S/giphy.gif
+
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
+## Uso de Material UI
+Porque es una de las libreria mas usadas, puedo encontar mas ejemplos y puedo tener mas posibilidades laborales 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Como base de datos tenemos Firebase
+Es lo que aprendimos a usar en esta parte de React
+
+## Para el deploy usamos firebase
+### Entonces en la terminal ponemos `npm run build`, luego desplayamos con `firebase deploy`
+
+### URL : https://club-bajonero.web.app
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.

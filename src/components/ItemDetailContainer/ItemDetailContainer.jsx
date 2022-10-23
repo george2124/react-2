@@ -24,7 +24,7 @@ export default function ItemDetailContainer(){
     })
     .catch((error)=> console.log(error))
     .finally(()=> setLoading(false))
-  }, [])
+  }, [id])
 
   // useEffect(() => {
   //    data
